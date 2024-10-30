@@ -1,0 +1,16 @@
+.contentContainer {
+    background-color: #f8fafb;
+    width: 70%;
+    height: 360px;
+    border-bottom-left-radius: 4px;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.contentContainer h4 {
+    margin: 0;
+    padding: 20px 0 10px 0;
+    width: 96%;
+    margin-left: 2%;
+    font-weight: lighter;
+}
