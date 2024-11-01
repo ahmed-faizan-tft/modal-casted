@@ -1,6 +1,13 @@
 import React, { useState } from 'react'
 import Styles from './SelectDateType.module.css'
 
+const dateTypeData = [
+    "Any Date",
+    "Past Year",
+    "Past Month",
+    "Past Week"
+]
+
 const Select = () => {
     const [isSelected, setIsSelected] = useState(false);
     const [selectedData, setSelectedData] = useState("Any Date");
@@ -18,7 +25,7 @@ const Select = () => {
     }
 
     return (
-        <>
+        <div className={Styles.mainContainer}>
             {
                 !isSelected && <div className={Styles.container} onClick={handleSelect}>
                     <div className={Styles.select}>{selectedData}</div>
@@ -28,12 +35,13 @@ const Select = () => {
                 </div>
             }
             {isSelected && <ul className={Styles.options}>
-                <li onClick={handleOptionSelect} data-value="Any Date">Any Date</li>
-                <li onClick={handleOptionSelect} data-value="Past Year">Past Year</li>
-                <li onClick={handleOptionSelect} data-value="Past Month">Past Month</li>
-                <li onClick={handleOptionSelect} data-value="Past Week">Past Week</li>
+                {
+                    dateTypeData.map((data) => {
+                        return <li onClick={handleOptionSelect} data-value={data}>{data}</li>
+                    })
+                }
             </ul>}
-        </>
+        </div>
     )
 }
 
