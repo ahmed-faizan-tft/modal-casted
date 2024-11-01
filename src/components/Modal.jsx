@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Styles from './Modal.module.css';
 import SearchBox from './SearchBox';
 import EpisodeView from './EpisodeView';
+import Paggination from './Paggination';
 // import cross from './../assets/images/cross.svg'
 
 const Modal = ({ onClose }) => {

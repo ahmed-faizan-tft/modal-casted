@@ -1,6 +1,7 @@
 import React from 'react'
 import Styles from './EpisodeView.module.css'
 import Card from './Card'
+import Paggination from './Paggination'
 
 const EpisodeView = () => {
     return (
@@ -10,6 +11,7 @@ const EpisodeView = () => {
             <Card />
             <Card />
             <Card />
+            <Paggination />
         </div>
     )
 }
