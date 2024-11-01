@@ -1,0 +1,98 @@
+.container {
+    width: 93%;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid rgb(204, 204, 204);
+    display: flex;
+}
+
+.select {
+    width: 85%;
+    height: 32px;
+    color: rgb(153, 153, 153);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    box-sizing: border-box;
+    padding-left: 10px
+}
+
+.arrow {
+    width: 30px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arrow svg {
+    fill: rgb(204, 204, 204)
+}
+
+.arrow svg:hover {
+    fill: rgb(153, 153, 153);
+}
+
+.options {
+    margin: 0;
+    padding: 0;
+    width: 93%;
+    max-height: 128px;
+    list-style: none;
+    overflow-y: auto;
+    scrollbar-width: none;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 4px;
+    margin-bottom: 30px;
+}
+
+.options li {
+    width: 100%;
+    height: 32px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    border-bottom: 1px solid rgb(204, 204, 204);
+    display: flex;
+    align-items: center;
+}
+
+.options li:last-child {
+    border: none;
+}
+
+.options li:hover {
+    background-color: #E9E8F0;
+}
+
+.selectedDataContainer {
+    padding-left: 5px;
+    background-color: #E9E8F0;
+    color: #3E3B82;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    border-radius: 2px;
+}
+
+.selectedDataContainer span {
+    margin-left: 5px;
+    padding-top: 5px;
+    height: 100%;
+}
+
+.selectedDataContainer span svg {
+    fill: #3E3B82;
+}
+
+.selectedDataContainer span:hover {
+    background-color: #3E3B82;
+}
+
+.selectedDataContainer span:hover svg {
+    fill: white
+}

@@ -3,7 +3,7 @@
     width: 70%;
     height: 360px;
     border-bottom-left-radius: 4px;
-    overflow-x: auto;
+    overflow-y: auto;
     scrollbar-width: none;
 }
 

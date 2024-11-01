@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import Styles from './Modal.module.css';
 import SearchBox from './SearchBox';
 import EpisodeView from './EpisodeView';
-import Paggination from './Paggination';
-// import cross from './../assets/images/cross.svg'
+import FilterView from './FilterView';
 
 const Modal = ({ onClose }) => {
     const [searchText, setSearchText] = useState("");
@@ -26,10 +25,9 @@ const Modal = ({ onClose }) => {
                     onClear={handleClear}
                     onClose={onClose}
                 />
-                {/* right side */}
-                <EpisodeView />
-                <div className={Styles.filterContainer}>
-
+                <div className={Styles.modalContent}>
+                    <EpisodeView />
+                    <FilterView />
                 </div>
             </div>
         </div>,

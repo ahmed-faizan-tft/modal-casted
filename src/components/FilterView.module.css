@@ -1,0 +1,105 @@
+.filterContainer {
+    width: 30%;
+    height: 360px;
+    /* background-color: red; */
+    box-sizing: border-box;
+    padding-left: 2%;
+    overflow-y: auto;
+    scrollbar-width: none;
+
+}
+
+.filterContainer .filterHeading {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 20px 0;
+    color: #6c757d;
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.0625rem;
+}
+
+.filterContainer .collection {
+    width: 98%;
+    margin-bottom: 20px;
+}
+
+.filterContainer .collection h3 {
+    box-sizing: border-box;
+    color: #031c33;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.37px;
+    line-height: 17px;
+    margin: 0 0 6px;
+}
+
+.seeMore {
+    color: #007bff;
+    cursor: pointer;
+    letter-spacing: 0;
+    line-height: 17px;
+    margin-top: 6px;
+}
+
+.filterContainer .itemTags {
+    width: 98%;
+    height: 80px;
+}
+
+.filterContainer .itemTags h3 {
+    box-sizing: border-box;
+    color: #031c33;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.37px;
+    line-height: 17px;
+    margin: 0 0 8px;
+}
+
+.filterContainer .clipTags {
+    width: 98%;
+    height: 80px;
+}
+
+.filterContainer .clipTags h3 {
+    box-sizing: border-box;
+    color: #031c33;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.37px;
+    line-height: 17px;
+    margin: 0 0 8px;
+}
+
+.contentType {
+    width: 98%;
+    margin-bottom: 20px;
+}
+
+.filterContainer .contentType h3 {
+    box-sizing: border-box;
+    color: #031c33;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.37px;
+    line-height: 17px;
+    margin: 0 0 6px;
+}
+
+.filterContainer .itemDate {
+    width: 98%;
+    height: 80px;
+}
+
+.filterContainer .itemDate h3 {
+    box-sizing: border-box;
+    color: #031c33;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.37px;
+    line-height: 17px;
+    margin: 0 0 8px;
+}

@@ -3,7 +3,7 @@ import Styles from './Paggination.module.css';
 import { createPaggination } from '../utils/page';
 
 const Paggination = () => {
-    const totalPages = 7;
+    const totalPages = 100;
     const [page, setPage] = useState(1);
     const [pageData, setPageData] = useState(() => createPaggination(totalPages, 1));
 
@@ -41,7 +41,7 @@ const Paggination = () => {
                         <li
                             key={index}
                             onClick={newPageData !== "..." ? handlePageChange : null}
-                            style={{ background: page == newPageData ? "blue" : "" }}
+                            style={{ background: page == newPageData ? "#7769E9" : "", color: page == newPageData ? "#F8FAFB" : "" }}
 
                             data-name={`${newPageData}`}
                         >
