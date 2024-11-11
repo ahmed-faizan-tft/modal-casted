@@ -1,7 +1,9 @@
 import React from 'react';
 import Styles from './Card.module.css'
+import ChildCard from './ChildCard';
 
-const Card = () => {
+const Card = ({ data }) => {
+    const { parent_info, children } = data;
     return (
         <div className={Styles.card}>
             <div className={Styles.cardHeader}>
@@ -16,16 +18,19 @@ const Card = () => {
                     <img src='https://picsum.photos/200/300' />
                 </div>
                 <div className={Styles.cardContent}>
-                    <h3 >How Hard Can It Be With Heike Young</h3>
+                    <h3 >{parent_info.topic}</h3>
                     <div className={Styles.episodeDetail}>
                         <span>Season 1 | </span>
                         <span>Episode 4 | </span>
-                        <span>August 13, 2020</span>
+                        <span>{parent_info.published_at}</span>
                     </div>
-                    <div className={Styles.episodeText}>Heike Young is one of the original hosts of the Salesforce Marketing Cloudcast,
-                        one of the first B2B podcasts that started way back when Serial first took the podcasting world
-                        by storm. While she originally started out as a producer for the show, she quickly took on a
-                        hosting role and was an
+
+                    <div className={Styles.episodeText}>
+                        {
+                            children && children.map((child) => {
+                                return <ChildCard data={child} />
+                            })
+                        }
                     </div>
                 </div>
             </div>
