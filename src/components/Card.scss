@@ -1,4 +1,4 @@
-.card {
+.search-result {
     width: 96%;
     margin-left: 2%;
     background-color: white;
@@ -6,17 +6,13 @@
     margin-bottom: 10px;
 }
 
-.card:hover {
-    border: 1px solid blue;
-}
-
-.card .cardHeader {
+.search-result-header {
     width: 100%;
     height: 40px;
     display: flex;
 }
 
-.card .cardHeader h4 {
+.search-result-header h4 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -29,51 +25,34 @@
     padding-left: 15px;
 }
 
-.card .cardHeader .hiddenContainer {
-    width: calc(100% - 135px);
-    height: 40px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.card .cardHeader .hiddenContainer span {
-    color: blue;
-    line-height: 40px;
-    font-size: 12px;
-}
-
-.card .cardHeader .hiddenContainer {
-    opacity: 0;
-}
-
-.card:hover .cardHeader .hiddenContainer {
-    opacity: 1;
-}
-
-.card .innerCard {
+.inner-search-result {
     width: 100%;
-    display: flex;
 }
 
-.card .innerCard .cardImage {
+.search-result-image {
     width: 10%;
     margin-left: 15px;
 }
 
-.card .innerCard .cardImage img {
+.search-result-image img {
     width: 41px;
     height: 41px
 }
 
-.card .innerCard .cardContent {
-    width: calc(90% - 15px);
+.search-result-content {
+    width: 90%;
+    display: flex;
 }
 
-.card .innerCard .cardContent h3 {
+.search-result-titles {
+    width: 80%;
+}
+
+.search-result-titles h3 {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    width: 90%;
+    width: 100%;
     font-style: normal;
     color: #37373c;
     font-size: .875rem;
@@ -82,7 +61,8 @@
     line-height: 1.1875rem;
 }
 
-.card .innerCard .cardContent .episodeDetail {
+.result-detail {
+    width: 100%;
     font-weight: 400;
     color: #868e96;
     font-size: .8rem;
@@ -90,13 +70,21 @@
     line-height: 1.125rem;
 }
 
-.card .innerCard .cardContent .episodeText {
-    width: 95%;
+.result-text {
+    width: calc(100% - 15px);
     color: #343a40;
     font-size: .875rem;
     letter-spacing: 0;
     line-height: 1.3125rem;
     margin-top: .5rem;
     margin-bottom: 15px;
+    margin-left: 15px;
     border-radius: 2px;
+}
+
+.child-line:not(:last-child) {
+    width: calc(100% - 15px);
+    height: 1.5px;
+    background-color: #EDEEF0;
+    margin: 10px 0;
 }

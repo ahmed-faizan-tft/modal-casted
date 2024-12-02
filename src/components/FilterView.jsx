@@ -1,12 +1,14 @@
 import React, { useState } from 'react'
 import Styles from './FilterView.module.css'
 import Selectbox from './Selectbox';
-import { collection as dataCollection } from '../utils/data';
 import Select from './Select';
 import SelectDateType from "./SelectDateType"
+import { episodeDetails } from '../utils/data'
 
+const dataCollection = episodeDetails?.data?.searchContent?.filters?.podcasts
+const tagOptions = episodeDetails?.data?.searchContent?.filters?.tags
 const FilterView = () => {
-    const [collectionData, setCollectionData] = useState(dataCollection.slice(0, 5));
+    const [collectionData, setCollectionData] = useState(dataCollection?.slice(0, 5));
     const handleCollectionData = () => {
         setCollectionData((prevData) => {
             return dataCollection.slice(0, prevData.length + 10);
@@ -23,15 +25,15 @@ const FilterView = () => {
             <div className={Styles.collection}>
                 <h3>COLLECTION</h3>
                 {
-                    collectionData?.map((title) => {
-                        return <Selectbox title={title} handleSelect={handleSelect} />
+                    collectionData && collectionData.map((title) => {
+                        return <Selectbox title={title?.length > 35 ? `${title.slice(0, 33)}...` : title} handleSelect={handleSelect} />
                     })
                 }
                 {collectionData?.length != dataCollection?.length && < div className={Styles.seeMore} style={{ fontSize: "14px;" }} onClick={handleCollectionData}>See more</div>}
             </div>
             <div className={Styles.itemTags}>
                 <h3>ITEM TAGS</h3>
-                <Select />
+                <Select tags={tagOptions} />
             </div>
 
             <div className={Styles.clipTags}>

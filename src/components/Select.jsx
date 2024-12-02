@@ -8,7 +8,7 @@ const selectMenuData = [
     "season-5"
 ]
 
-const Select = () => {
+const Select = ({ tags }) => {
     const [isSelected, setIsSelected] = useState(false);
     const [selectedData, setSelectedData] = useState([]);
 
@@ -66,7 +66,7 @@ const Select = () => {
                 </div>
                 {isSelected && <ul className={Styles.options}>
                     {
-                        selectMenuData.map((data) => {
+                        tags && tags.map((data) => {
                             return <li onClick={handleOptionSelect} data-value={data}>{data}</li>
                         })
                     }
